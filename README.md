@@ -7,7 +7,10 @@ The Human Governed AI Development Playbook is a structured, agent-driven methodo
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![Documentation](https://img.shields.io/badge/docs-latest-brightgreen.svg)](./docs-en/)
 [![AI Agents](https://img.shields.io/badge/AI%20Agents-16-blue.svg)](./docs-en/agents/)
-
+  
+> **Note:** The Spanish (Castellano) version of the site (https://slackdevs.com/es) is provided only for translation review, as it is my native language. It will remain online but may be outdated. Consequently, the language selector on the main site will be removed.
+>
+> **Nota:** La versión en español (castellano) del sitio (https://slackdevs.com/es) está disponible únicamente para revisión de traducción, ya que es mi lengua materna. Permanecerá online pero puede estar desactualizada. Por este motivo, se eliminará el selector de idioma del sitio principal.
 ## <� What Is This?
 
 The **Human Governed AI Development Playbook** is a revolutionary methodology that enables **autonomous software development** using specialized AI agents while maintaining human control at critical decision points. It's not about replacing developersit's about multiplying their capabilities across the entire software development lifecycle.
