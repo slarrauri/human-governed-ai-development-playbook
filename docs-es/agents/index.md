@@ -1,114 +1,114 @@
-# SAGE Agents — Overview
+# SAGE Agentes — Descripción General
 
-The **SlackDevs Agentic Governance Engine (SAGE)** consists of specialized AI agents, each responsible for specific aspects of the software development lifecycle (Human Governed AI Development Playbook). These agents collaborate autonomously to deliver high-quality software while maintaining human oversight at critical decision points.
-
----
-
-## Universal Agent Architecture
-
-SAGE agents are designed to be:
-
-- **Technology Agnostic**: Work with any programming language, framework, or platform
-- **Scalable**: Adapt from solo projects to enterprise-scale developments  
-- **Governance-Driven**: Operate under configurable human oversight and approval matrices
-- **Quality-Focused**: Implement comprehensive quality gates and validation mechanisms
-- **Security-First**: Integrate security best practices throughout the development lifecycle
+El **SlackDevs Agentic Governance Engine (SAGE)** consiste en agentes de IA especializados, cada uno responsable de aspectos específicos del ciclo de vida del desarrollo de software (Human Governed AI Development Playbook). Estos agentes colaboran de manera autónoma para entregar software de alta calidad mientras mantienen la supervisión humana en puntos críticos de decisión.
 
 ---
 
-## Core Agent Directory
+## Arquitectura Universal de Agentes
 
-| ID   | Agent Name              | Role & Specialization                                                          | Lines | Status |
-|------|-------------------------|--------------------------------------------------------------------------------|-------|--------|
-| 00   | [Prompt Refiner Agent](prompt_refiner_agent) | Improves task prompts, confirms scope, and ensures clarity | 93    | ✅ Active |
-| 01   | [Requirements Analyzer Agent](requirements_analyzer_agent) | Comprehensive requirements engineering and stakeholder analysis | 747   | ✅ Enhanced |
-| 02   | [Human Governed AI Development Playbook Router Agent](Human Governed AI Development Playbook_router_agent) | Intelligent workflow routing and agent orchestration | 49    | ✅ Active |
-| 03   | [Architecture Agent](architecture_agent) | System design, architecture decisions, and technical blueprints | 347   | ✅ Active |
-| 04   | [Implementation Agent](implementation_agent) | Universal code implementation across any technology stack | 269   | ✅ Enhanced |
-| 05   | [Test Agent](test_agent) | Comprehensive testing (unit, integration, e2e) for all technologies | 476   | ✅ Enhanced |
-| 06   | [Documentation Writer Agent](documentation_writer_agent) | Technical and user documentation generation | 41    | ✅ Active |
-| 07   | [Branch/PR Manager Agent](branch_pr_manager_agent) | Git operations, pull requests, and version control management | 227   | ✅ Active |
-| 08   | [Internal Reviewer Agent](internal_reviewer_agent) | Code review, quality assessment, and improvement suggestions | 41    | ✅ Active |
-| 09   | [Retry Agent](retry_agent) | Intelligent failure analysis, learning, and task recovery | 628   | ✅ Enhanced |
-| 10   | [Deployment Agent](deployment_agent) | Universal deployment, CI/CD, and infrastructure automation | 797   | ✅ Enhanced |
-| 11   | [Maintenance Agent](maintenance_agent) | Proactive maintenance, dependency updates, and health monitoring | 88    | ✅ Active |
+Los agentes SAGE están diseñados para ser:
+
+- **Tecnológicamente Agnósticos**: Funcionan con cualquier lenguaje de programación, framework o plataforma
+- **Escalables**: Se adaptan desde proyectos individuales hasta desarrollos a escala empresarial  
+- **Orientados a la Gobernanza**: Operan bajo matrices de supervisión y aprobación humana configurables
+- **Enfocados en la Calidad**: Implementan controles de calidad y mecanismos de validación integrales
+- **Prioridad en Seguridad**: Integran mejores prácticas de seguridad a lo largo del ciclo de vida del desarrollo
 
 ---
 
-## Specialized Security & Performance Agents
+## Directorio Central de Agentes
 
-| ID   | Agent Name              | Role & Specialization                                                          | Lines | Status |
-|------|-------------------------|--------------------------------------------------------------------------------|-------|--------|
-| 12   | [Security Agent](security_agent) | Comprehensive security analysis, vulnerability assessment, compliance | 674   | 🆕 New |
-| 13   | [Performance Agent](performance_agent) | Performance optimization, monitoring, and scalability analysis | 821   | 🆕 New |
-| 14   | [Integration Agent](integration_agent) | API management, system integration, and data pipeline orchestration | 567   | 🆕 New |
-| 15   | [DevOps Agent](devops_agent) | Infrastructure automation, CI/CD orchestration, and operational excellence | 923   | 🆕 New |
+| ID   | Nombre del Agente              | Rol y Especialización                                                          | Líneas | Estado |
+|------|-------------------------------|--------------------------------------------------------------------------------|--------|--------|
+| 00   | [Agente Refinador de Prompts](prompt_refiner_agent) | Mejora los prompts de tareas, confirma el alcance y asegura claridad | 93    | ✅ Activo |
+| 01   | [Agente Analizador de Requerimientos](requirements_analyzer_agent) | Ingeniería de requerimientos y análisis de stakeholders | 747   | ✅ Mejorado |
+| 02   | [Agente Router del Playbook](Human Governed AI Development Playbook_router_agent) | Enrutamiento inteligente de flujos y orquestación de agentes | 49    | ✅ Activo |
+| 03   | [Agente de Arquitectura](architecture_agent) | Diseño de sistemas, decisiones de arquitectura y planos técnicos | 347   | ✅ Activo |
+| 04   | [Agente de Implementación](implementation_agent) | Implementación universal de código en cualquier stack tecnológico | 269   | ✅ Mejorado |
+| 05   | [Agente de Pruebas](test_agent) | Pruebas integrales (unitarias, integración, e2e) para todas las tecnologías | 476   | ✅ Mejorado |
+| 06   | [Agente Redactor de Documentación](documentation_writer_agent) | Generación de documentación técnica y de usuario | 41    | ✅ Activo |
+| 07   | [Agente Gestor de Branch/PR](branch_pr_manager_agent) | Operaciones Git, pull requests y gestión de control de versiones | 227   | ✅ Activo |
+| 08   | [Agente Revisor Interno](internal_reviewer_agent) | Revisión de código, evaluación de calidad y sugerencias de mejora | 41    | ✅ Activo |
+| 09   | [Agente de Reintentos](retry_agent) | Análisis inteligente de fallos, aprendizaje y recuperación de tareas | 628   | ✅ Mejorado |
+| 10   | [Agente de Despliegue](deployment_agent) | Despliegue universal, CI/CD y automatización de infraestructura | 797   | ✅ Mejorado |
+| 11   | [Agente de Mantenimiento](maintenance_agent) | Mantenimiento proactivo, actualización de dependencias y monitoreo | 88    | ✅ Activo |
 
 ---
 
-## Enhanced Pipeline Architecture
+## Agentes Especializados en Seguridad y Rendimiento
 
-The improved SAGE pipeline supports multiple execution paths based on project requirements:
+| ID   | Nombre del Agente              | Rol y Especialización                                                          | Líneas | Estado |
+|------|-------------------------------|--------------------------------------------------------------------------------|--------|--------|
+| 12   | [Agente de Seguridad](security_agent) | Análisis de seguridad, evaluación de vulnerabilidades y cumplimiento | 674   | 🆕 Nuevo |
+| 13   | [Agente de Rendimiento](performance_agent) | Optimización de rendimiento, monitoreo y análisis de escalabilidad | 821   | 🆕 Nuevo |
+| 14   | [Agente de Integración](integration_agent) | Gestión de APIs, integración de sistemas y orquestación de pipelines de datos | 567   | 🆕 Nuevo |
+| 15   | [Agente DevOps](devops_agent) | Automatización de infraestructura, orquestación CI/CD y excelencia operativa | 923   | 🆕 Nuevo |
 
-### Standard Development Flow
+---
+
+## Arquitectura Mejorada del Pipeline
+
+El pipeline mejorado de SAGE soporta múltiples rutas de ejecución según los requerimientos del proyecto:
+
+### Flujo de Desarrollo Estándar
 ```text
 Requirements → Router → Architect → Implementation → Testing → Security → Performance → Documentation → Review → Integration → DevOps → Deployment
 ```
 
-### Security-Critical Flow
+### Flujo Crítico en Seguridad
 ```text
 Requirements → Router → Security → Architect → Implementation → Security → Testing → Performance → Security → Review → DevOps → Deployment
 ```
 
-### Performance-Critical Flow  
+### Flujo Crítico en Rendimiento  
 ```text
 Requirements → Router → Architect → Performance → Implementation → Testing → Performance → Review → DevOps → Performance → Deployment
 ```
 
-### Integration-Heavy Flow
+### Flujo Intensivo en Integración
 ```text
 Requirements → Router → Architect → Integration → Implementation → Testing → Integration → Security → Review → DevOps → Deployment
 ```
 
 ---
 
-## Governance Integration
+## Integración de Gobernanza
 
-All agents operate under the **Human Governed AI Development Playbook Governance Framework** with:
+Todos los agentes operan bajo el **Marco de Gobernanza del Human Governed AI Development Playbook** con:
 
-### Quality Gates
-- **Requirements Phase**: Business validation, stakeholder sign-off, technical feasibility
-- **Architecture Phase**: Security review, scalability assessment, technology validation
-- **Implementation Phase**: Code quality, security scanning, test coverage
-- **Testing Phase**: Functional completion, performance validation, security testing
-- **Security Review**: Vulnerability assessment, compliance validation, privacy review
-- **Performance Review**: Load testing, scalability validation, monitoring setup
-- **Integration Review**: API validation, end-to-end testing, data flow verification
-- **Deployment Review**: Production readiness, rollback validation, support documentation
+### Controles de Calidad
+- **Fase de Requerimientos**: Validación de negocio, aprobación de stakeholders, viabilidad técnica
+- **Fase de Arquitectura**: Revisión de seguridad, evaluación de escalabilidad, validación tecnológica
+- **Fase de Implementación**: Calidad de código, escaneo de seguridad, cobertura de pruebas
+- **Fase de Pruebas**: Finalización funcional, validación de rendimiento, pruebas de seguridad
+- **Revisión de Seguridad**: Evaluación de vulnerabilidades, validación de cumplimiento, revisión de privacidad
+- **Revisión de Rendimiento**: Pruebas de carga, validación de escalabilidad, configuración de monitoreo
+- **Revisión de Integración**: Validación de APIs, pruebas end-to-end, verificación de flujo de datos
+- **Revisión de Despliegue**: Preparación para producción, validación de rollback, documentación de soporte
 
-### Approval Matrix
-- **Business Impact**: Product Manager → Business Owner → Executive Sponsor
-- **Technical Changes**: Technical Lead → Principal Architect → CTO
-- **Security Changes**: Security Engineer → Security Lead → CISO
-- **Infrastructure Changes**: DevOps Lead → Infrastructure Architect → VP Engineering
+### Matriz de Aprobación
+- **Impacto de Negocio**: Product Manager → Business Owner → Executive Sponsor
+- **Cambios Técnicos**: Technical Lead → Principal Architect → CTO
+- **Cambios de Seguridad**: Security Engineer → Security Lead → CISO
+- **Cambios de Infraestructura**: DevOps Lead → Infrastructure Architect → VP Engineering
 
-### Human Oversight Checkpoints
-- After requirements analysis
-- After architecture design  
-- After implementation
-- After testing completion
-- After security review
-- After performance validation
-- Before infrastructure changes
-- After integration testing
-- Before production deployment
-- After production deployment
+### Puntos de Control de Supervisión Humana
+- Tras el análisis de requerimientos
+- Tras el diseño de arquitectura  
+- Tras la implementación
+- Tras la finalización de pruebas
+- Tras la revisión de seguridad
+- Tras la validación de rendimiento
+- Antes de cambios de infraestructura
+- Tras pruebas de integración
+- Antes del despliegue a producción
+- Tras el despliegue a producción
 
 ---
 
-## Agent Communication Protocol
+## Protocolo de Comunicación entre Agentes
 
-### Standardized Message Format
+### Formato Estandarizado de Mensajes
 ```json
 {
   "agent_id": "04_IMPLEMENTATION_AGENT",
@@ -137,59 +137,59 @@ All agents operate under the **Human Governed AI Development Playbook Governance
 }
 ```
 
-### Context Preservation
-- **Task History**: Complete audit trail of all agent activities
-- **Decision Rationale**: Documentation of key decisions and alternatives considered
-- **Quality Metrics**: Continuous tracking of quality indicators
-- **Human Feedback**: Integration of human review comments and approvals
+### Preservación de Contexto
+- **Historial de Tareas**: Registro completo de todas las actividades de los agentes
+- **Razonamiento de Decisiones**: Documentación de decisiones clave y alternativas consideradas
+- **Métricas de Calidad**: Seguimiento continuo de indicadores de calidad
+- **Retroalimentación Humana**: Integración de comentarios y aprobaciones de revisores humanos
 
 ---
 
-## Technology Stack Support
+## Soporte de Stack Tecnológico
 
-### Frontend Technologies
-- **Web**: React, Vue, Angular, Svelte, vanilla JavaScript/TypeScript
-- **Mobile**: Flutter/Dart, React Native, Swift, Kotlin
-- **Desktop**: Electron, Tauri, Qt, .NET, Flutter Desktop
+### Tecnologías Frontend
+- **Web**: React, Vue, Angular, Svelte, JavaScript/TypeScript puro
+- **Móvil**: Flutter/Dart, React Native, Swift, Kotlin
+- **Escritorio**: Electron, Tauri, Qt, .NET, Flutter Desktop
 
-### Backend Technologies  
-- **Languages**: Node.js, Python, Java, C#, Go, Rust, PHP, Scala
+### Tecnologías Backend  
+- **Lenguajes**: Node.js, Python, Java, C#, Go, Rust, PHP, Scala
 - **Frameworks**: Express, Django, Spring Boot, ASP.NET, Gin, Actix, Laravel
-- **Databases**: PostgreSQL, MySQL, MongoDB, Redis, Cassandra, DynamoDB
+- **Bases de Datos**: PostgreSQL, MySQL, MongoDB, Redis, Cassandra, DynamoDB
 
-### Cloud & Infrastructure
-- **Providers**: AWS, Azure, Google Cloud, DigitalOcean
-- **Containers**: Docker, Kubernetes, ECS, AKS, GKE
+### Nube e Infraestructura
+- **Proveedores**: AWS, Azure, Google Cloud, DigitalOcean
+- **Contenedores**: Docker, Kubernetes, ECS, AKS, GKE
 - **CI/CD**: GitHub Actions, GitLab CI, Azure DevOps, Jenkins
-- **Monitoring**: Prometheus, Grafana, ELK Stack, Datadog
+- **Monitoreo**: Prometheus, Grafana, ELK Stack, Datadog
 
 ---
 
-## Quality Metrics & KPIs
+## Métricas de Calidad y KPIs
 
-### Development Velocity
-- **Deployment Frequency**: Target daily deployments
-- **Lead Time**: Commit to production < 2 hours
-- **Recovery Time**: Incident resolution < 1 hour  
-- **Change Failure Rate**: < 5% failed deployments
+### Velocidad de Desarrollo
+- **Frecuencia de Despliegue**: Objetivo de despliegues diarios
+- **Lead Time**: De commit a producción < 2 horas
+- **Tiempo de Recuperación**: Resolución de incidentes < 1 hora  
+- **Tasa de Fallo de Cambios**: < 5% de despliegues fallidos
 
-### Quality Metrics
-- **Code Coverage**: > 90% for all projects
-- **Security Vulnerabilities**: 0 critical, < 5 high severity
-- **Technical Debt Ratio**: < 5% of codebase
-- **Code Quality Score**: > 8.5/10 (SonarQube)
+### Métricas de Calidad
+- **Cobertura de Código**: > 90% para todos los proyectos
+- **Vulnerabilidades de Seguridad**: 0 críticas, < 5 de alta severidad
+- **Ratio de Deuda Técnica**: < 5% del código base
+- **Puntaje de Calidad de Código**: > 8.5/10 (SonarQube)
 
-### Governance Metrics
-- **Approval Time**: Average < 24 hours
-- **Checkpoint Pass Rate**: > 95%
-- **Escalation Rate**: < 5%
-- **Compliance Score**: 100% for regulatory requirements
+### Métricas de Gobernanza
+- **Tiempo de Aprobación**: Promedio < 24 horas
+- **Tasa de Aprobación de Checkpoints**: > 95%
+- **Tasa de Escalación**: < 5%
+- **Puntaje de Cumplimiento**: 100% para requerimientos regulatorios
 
 ---
 
-## Configuration & Customization
+## Configuración y Personalización
 
-All agents operate based on the unified configuration file `.sdc/config.yaml`:
+Todos los agentes operan basados en el archivo de configuración unificado `.sdc/config.yaml`:
 
 ```yaml
 # Universal SAGE Configuration
@@ -218,9 +218,9 @@ quality:
 
 ---
 
-## Getting Started
+## Primeros Pasos
 
-### 1. Project Initialization
+### 1. Inicialización de Proyecto
 ```bash
 # Initialize SAGE for a new project
 sage init --project myapp --stack react-node --governance hybrid
@@ -230,7 +230,7 @@ sage config set complexity high
 sage config set criticality business_critical
 ```
 
-### 2. Agent Execution
+### 2. Ejecución de Agentes
 ```bash
 # Execute full development pipeline
 sage run --task "implement user authentication"
@@ -242,7 +242,7 @@ sage run --agents "01,03,04,05" --task "add payment integration"
 sage status --task-id feature-auth-v2
 ```
 
-### 3. Governance Dashboard
+### 3. Panel de Gobernanza
 ```bash
 # Launch governance dashboard
 sage dashboard --port 3000
@@ -256,42 +256,42 @@ sage report --type compliance --format pdf
 
 ---
 
-## Advanced Features
+## Funcionalidades Avanzadas
 
-### Parallel Agent Execution
-- **Dependency Management**: Automatic resolution of agent dependencies
-- **Resource Optimization**: Intelligent workload distribution
-- **Conflict Resolution**: Automated merge conflict handling
+### Ejecución Paralela de Agentes
+- **Gestión de Dependencias**: Resolución automática de dependencias entre agentes
+- **Optimización de Recursos**: Distribución inteligente de la carga de trabajo
+- **Resolución de Conflictos**: Manejo automatizado de conflictos de merge
 
-### Learning & Adaptation
-- **Pattern Recognition**: Learning from successful implementations
-- **Failure Analysis**: Intelligent root cause analysis and prevention
-- **Continuous Improvement**: Automatic optimization of agent performance
+### Aprendizaje y Adaptación
+- **Reconocimiento de Patrones**: Aprendizaje de implementaciones exitosas
+- **Análisis de Fallos**: Análisis inteligente de causas raíz y prevención
+- **Mejora Continua**: Optimización automática del desempeño de los agentes
 
-### Enterprise Integration
-- **SSO Integration**: SAML, OAuth 2.0, Active Directory
-- **Audit Compliance**: SOX, GDPR, HIPAA, PCI-DSS
-- **Multi-tenant Support**: Isolated execution environments
-- **API Gateway**: RESTful and GraphQL APIs for external integration
-
----
-
-## Future Roadmap
-
-### Planned Enhancements
-- **AI-Powered Code Generation**: Advanced LLM integration for complex implementations
-- **Natural Language Requirements**: Direct translation of business requirements to code
-- **Predictive Quality Assurance**: ML-based defect prediction and prevention
-- **Autonomous Optimization**: Self-improving agents based on project outcomes
-
-### Experimental Features
-- **Multi-Agent Collaboration**: Advanced inter-agent communication and coordination
-- **Domain-Specific Agents**: Specialized agents for specific industries or use cases
-- **Real-time Adaptation**: Dynamic agent behavior based on project context
-- **Human-AI Pair Programming**: Enhanced collaboration between human developers and AI agents
+### Integración Empresarial
+- **Integración SSO**: SAML, OAuth 2.0, Active Directory
+- **Cumplimiento de Auditoría**: SOX, GDPR, HIPAA, PCI-DSS
+- **Soporte Multi-tenant**: Entornos de ejecución aislados
+- **API Gateway**: APIs RESTful y GraphQL para integración externa
 
 ---
 
-> **SAGE empowers teams to deliver exceptional software through intelligent automation, comprehensive governance, and human-centric oversight.**
+## Hoja de Ruta Futura
 
-For detailed information about each agent, refer to their individual specification files in this directory.
+### Mejoras Planeadas
+- **Generación de Código con IA**: Integración avanzada de LLM para implementaciones complejas
+- **Requerimientos en Lenguaje Natural**: Traducción directa de requerimientos de negocio a código
+- **Aseguramiento de Calidad Predictivo**: Predicción y prevención de defectos basada en ML
+- **Optimización Autónoma**: Agentes auto-mejorables según resultados de proyectos
+
+### Funcionalidades Experimentales
+- **Colaboración Multi-Agente**: Comunicación y coordinación avanzada entre agentes
+- **Agentes de Dominio Específico**: Agentes especializados para industrias o casos de uso concretos
+- **Adaptación en Tiempo Real**: Comportamiento dinámico de agentes según el contexto del proyecto
+- **Pair Programming Humano-IA**: Colaboración mejorada entre desarrolladores humanos y agentes de IA
+
+---
+
+> **SAGE empodera a los equipos para entregar software excepcional mediante automatización inteligente, gobernanza integral y supervisión centrada en las personas.**
+
+Para información detallada sobre cada agente, consulta sus archivos de especificación individuales en este directorio.
