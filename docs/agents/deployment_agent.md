@@ -232,9 +232,9 @@ resources:
 
 ### 3. Mobile App Deployment
 
-**Flutter (GitHub Actions)**:
+**Mobile Application (GitHub Actions)**:
 ```yaml
-name: Build and Deploy Flutter App
+name: Build and Deploy Mobile App
 
 on:
   push:
@@ -248,52 +248,48 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - name: Setup Flutter
-        uses: subosito/flutter-action@v2
+      - name: Setup Application Environment
+        uses: actions/setup-node@v3
         with:
-          flutter-version: '3.10.0'
+          node-version: '18'
           
       - name: Install dependencies
-        run: flutter pub get
+        run: npm install
         
       - name: Run tests
-        run: flutter test
+        run: npm test
         
-      - name: Build APK
-        run: flutter build apk --release
+      - name: Build Application
+        run: npm run build:android
         
-      - name: Upload to Firebase App Distribution
-        uses: wzieba/Firebase-Distribution-Github-Action@v1
+      - name: Upload to Distribution Platform
+        uses: distribution-action@v1
         with:
-          appId: ${{ secrets.FIREBASE_APP_ID }}
-          token: ${{ secrets.FIREBASE_TOKEN }}
+          app-id: ${{ secrets.APP_ID }}
+          token: ${{ secrets.DISTRIBUTION_TOKEN }}
           groups: testers
-          file: build/app/outputs/flutter-apk/app-release.apk
+          file: build/outputs/app-release.apk
 
   build-ios:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
       
-      - name: Setup Flutter
-        uses: subosito/flutter-action@v2
+      - name: Setup Application Environment
+        uses: actions/setup-node@v3
         with:
-          flutter-version: '3.10.0'
+          node-version: '18'
           
       - name: Install dependencies
-        run: flutter pub get
+        run: npm install
         
-      - name: Build iOS
-        run: |
-          flutter build ios --release --no-codesign
+      - name: Build iOS Application
+        run: npm run build:ios
           
-      - name: Archive and Upload to TestFlight
+      - name: Archive and Upload to App Store
         run: |
-          xcodebuild -workspace ios/Runner.xcworkspace \
-            -scheme Runner \
-            -configuration Release \
-            -archivePath Runner.xcarchive \
-            archive
+          # Platform-specific build and upload commands
+          npm run deploy:ios
 ```
 
 ---
@@ -711,8 +707,9 @@ if [ -f "package.json" ]; then
     npm install
 elif [ -f "requirements.txt" ]; then
     pip install -r requirements.txt
-elif [ -f "pubspec.yaml" ]; then
-    flutter pub get
+elif [ -f "pubspec.yaml" ] || [ -f "package.json" ]; then
+    # Install dependencies based on package manager
+    npm install
 fi
 
 # Setup database

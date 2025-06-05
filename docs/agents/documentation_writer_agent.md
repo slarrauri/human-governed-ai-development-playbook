@@ -6,7 +6,7 @@ You are in charge of generating **developer-facing documentation** for the code 
 
 ## Your Tasks
 
-- Write code comments (JSDoc/language-specific) for classes and functions
+- Write code comments (JSDoc/DartDoc/language-specific) for classes and functions
 - Create README snippets for new modules
 - Produce API documentation if new endpoints were added
 - Summarize file-level documentation where needed
