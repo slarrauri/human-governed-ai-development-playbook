@@ -1,0 +1,5 @@
+site/
+.venv/
+AISD-CLAUDE-VERSION
+trans.md
+.DS_Store

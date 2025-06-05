@@ -1,0 +1,197 @@
+# Project information
+site_name: Slackdevs
+site_url: https://slackdevs.com
+site_author: Sebastian Larrauri
+site_description: >-
+  "We don’t automate developers — we multiply them."
+
+# Repository
+repo_name: slackdevs/human-governed-ai-development-playbook
+repo_url: https://github.com/slackdevs/human-governed-ai-development-playbook
+
+copyright: Copyright &copy; 2024 - 2025 Sebastian Larrauri - Creative Commons Atribución 4.0 Internacional (CC BY 4.0)
+docs_dir: docs-en
+# Configuration
+theme:
+  name: material
+  custom_dir: material/overrides-en
+  features:
+  # --- CONTENIDO ---
+  - content.code.annotate           # ✅ Permite anotar y numerar líneas de código
+  - content.code.copy               # ✅ Botón para copiar código
+  - content.code.select             # 🔒 Selección dentro de bloques de código (raro de usar)
+  # - content.action.edit           # 🔒 Botón para editar la página en GitHub
+  # - content.action.view           # 🔒 Botón para ver fuente en el repo
+  - content.footnote.tooltips       # 🔒 Convierte notas al pie en tooltips
+  - content.tabs.link             # 🔒 Tabs con enlaces individuales (si usás tabs complejas)
+  - content.tooltips                # ✅ Muestra tooltips para enlaces con título
+
+  # --- NAVEGACIÓN ---
+  - navigation.tabs                 # ✅ Tabs superiores (para separar secciones como AISDG / Agents)
+  # - navigation.tabs.sticky        # 🔒 Tabs siempre visibles al hacer scroll (no necesario aún)
+  - navigation.footer               # ✅ Enlaces prev/next al pie
+  - navigation.tracking             # ✅ Actualiza URL según sección visible
+  - navigation.indexes              # ✅ index.md como portada de subcarpetas
+  # - navigation.expand             # 🔒 Expande todo el menú (innecesario por ahora)
+  # - navigation.instant            # 🔒 Navegación instantánea sin recarga (incompatible con algunos scripts)
+  # - navigation.instant.prefetch   # 🔒 Precarga páginas al hacer hover (más útil en sitios grandes)
+  # - navigation.instant.progress   # 🔒 Barra de carga para navegación instantánea
+  # - navigation.prune              # 🔒 Oculta entradas muy profundas automáticamente
+  - navigation.sections           # 🔒 Agrupa el menú lateral por secciones (útil si hay cientos de páginas)
+
+  # --- BÚSQUEDA ---
+  - search.highlight                # ✅ Resalta palabras en los resultados
+  - search.suggest                  # ✅ Sugerencias mientras escribís
+  - search.share                    # ✅ Permite compartir búsqueda con URL
+
+  # --- TOC (Índice) ---
+  # - toc.integrate                   # ✅ Muestra tabla de contenidos dentro del contenido
+  # - toc.follow                    # 🔒 Hace que el índice siga tu scroll (no necesario si se integra)
+
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: assets/images/favicon.png
+  logo: assets/images/logo.svg
+
+# Plugins
+plugins:
+  - blog
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+
+# Hooks
+hooks:
+  - material/overrides-en/hooks/shortcodes.py
+  - material/overrides-en/hooks/translations.py
+
+# Additional configuration
+extra:
+  status:
+    new: Recently added
+    deprecated: Deprecated
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/aislackdevs
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/company/aislackdevs
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/aislackdevs
+  alternate:
+    - name: English
+      link: https://slackdevs.com
+      lang: en
+    - name: Castellano
+      link: https://slackdevs.com/es
+      lang: es
+
+# Extensions
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      normalize_issue_symbols: true
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      auto_append:
+        - includes/mkdocs.md
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+not_in_nav: |
+  /tutorials/**/*.md
+
+# Page tree
+nav:
+  - Home: index.md
+  - Manifesto: manifesto.md
+  - Human Governed AI Development Playbook: 
+      - human-governed-ai-development-playbook/index.md
+      - Accelerate Software Development: human-governed-ai-development-playbook/accelerate-software-development-ai-human-governance.md
+      - AI Development Risks & Limitations: human-governed-ai-development-playbook/ai-development-risks-limitations-mitigation-strategies.md
+      - Boost Productivity AI Flows: human-governed-ai-development-playbook/boost-productivity-human-governed-ai-development-flows.md
+      - Enterprise Ready AI Governance Framework: human-governed-ai-development-playbook/enterprise-ready-responsible-ai-governance-compliance-framework.md
+      - Role Based AI Development Guides: human-governed-ai-development-playbook/role-based-ai-development-guides-optimize-human-governance.md
+      - Scalable AI Development Strategies: human-governed-ai-development-playbook/scalable-ai-development-strategies-any-team-size.md
+      - Universal AI Configuration Template: human-governed-ai-development-playbook/universal-human-governed-ai-development-playbook-configuration-template-quickstart-guide.md
+  - Agents: 
+      - agents/index.md
+      - 00 - Prompt Refiner: agents/prompt_refiner_agent.md
+      - 01 - Requirements Analyzer: agents/requirements_analyzer_agent.md
+      - 02 - SDLC Router: agents/sdlc_router_agent.md
+      - 03 - Architecture Agent: agents/architecture_agent.md
+      - 04 - Implementation Agent: agents/implementation_agent.md
+      - 05 - Test Agent: agents/test_agent.md
+      - 06 - Documentation Writer: agents/documentation_writer_agent.md
+      - 07 - Branch/PR Manager: agents/branch_pr_manager_agent.md
+      - 08 - Internal Reviewer: agents/internal_reviewer_agent.md
+      - 09 - Retry Agent: agents/retry_agent.md
+      - 10 - Deployment Agent: agents/deployment_agent.md
+      - 11 - Maintenance Agent: agents/maintenance_agent.md
+      - 12 - Security Agent: agents/security_agent.md
+      - 13 - Performance Agent: agents/performance_agent.md
+      - 14 - Integration Agent: agents/integration_agent.md
+      - 15 - DevOps Agent: agents/devops_agent.md
+  - Blog: blog/index.md
+  - About: about.md
