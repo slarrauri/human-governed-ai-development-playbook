@@ -1,20 +1,20 @@
 # Project information
 site_name: Slackdevs
-site_url: https://slackdevs.com
+site_url: https://slackdevs.com/es
 site_author: Sebastian Larrauri
 site_description: >-
-  "We don’t automate developers — we multiply them."
+    "No automatizamos desarrolladores — los multiplicamos."
 
 # Repository
 repo_name: slackdevs/human-governed-ai-development-playbook
 repo_url: https://github.com/slackdevs/human-governed-ai-development-playbook
 
 copyright: Copyright &copy; 2024 - 2025 Sebastian Larrauri - Creative Commons Atribución 4.0 Internacional (CC BY 4.0)
-docs_dir: docs-en
+docs_dir: docs-es
 # Configuration
 theme:
   name: material
-  custom_dir: material/overrides-en
+  custom_dir: material/overrides-es
   features:
   # --- CONTENIDO ---
   - content.code.annotate           # ✅ Permite anotar y numerar líneas de código
@@ -80,12 +80,11 @@ plugins:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
   - minify:
       minify_html: true
-  - social
 
 # Hooks
 hooks:
-  - material/overrides-en/hooks/shortcodes.py
-  - material/overrides-en/hooks/translations.py
+  - material/overrides-es/hooks/shortcodes.py
+  - material/overrides-es/hooks/translations.py
 
 # Additional configuration
 extra:
