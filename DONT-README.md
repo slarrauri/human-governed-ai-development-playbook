@@ -1,10 +1,10 @@
- # AI SDLC
+# Human Governed AI Development Playbook
 
  Part of the [Slackdevs](https://slackdevs.com) initiative.
 
  **We don’t automate developers — we multiply them.**
 
- AI-driven Software Development Life Cycle guidelines, best practices, and resources for building responsible and robust AI-powered applications.
+A comprehensive methodology for autonomous software development using specialized AI agents while maintaining human governance and control at critical decision points.
 
  ## Table of Contents
 
@@ -21,7 +21,7 @@
 
  ## Introduction
 
- This repository contains the source for the AI SDLC documentation and website. It is built with [MkDocs](https://www.mkdocs.org/) and the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
+This repository contains the source for the Human Governed AI Development Playbook documentation and website. It is built with [MkDocs](https://www.mkdocs.org/) and the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme.
 
  ## Prerequisites
 
@@ -33,8 +33,8 @@
  1. Clone the repository:
 
     ```bash
-    git clone https://github.com/slackdevs/ai-sdlc-hg.git
-    cd ai-sdlc
+    git clone https://github.com/slackdevs/human-governed-ai-development-playbook
+    cd human-governed-ai-development-playbook
     ```
 
  2. (Optional) Create and activate a virtual environment:
@@ -52,35 +52,115 @@
 
  ## Development
 
- To serve the documentation locally:
+To serve the documentation locally:
 
- ```bash
- mkdocs serve
- ```
+### English Version
+```bash
+# Using the automation script
+./sdc-serve.sh
 
- Browse to `http://127.0.0.1:8000` to view the site.
+# Or manually
+mkdocs serve -f mkdocs-en.yml
+```
 
- ## Building the Site
+### Spanish Version (Pending Translation)
+```bash
+# Using the automation script (when available)
+./sdc-serve-es.sh
 
- To build the static site:
+# Or manually (when mkdocs-es.yml is created)
+mkdocs serve -f mkdocs-es.yml
+```
 
- ```bash
- mkdocs build
- ```
+Browse to `http://127.0.0.1:8000` to view the site.
 
- The generated files will be placed in the `site/` directory.
+## Building the Site
 
- ## Deployment
+To build the static site:
+
+### English Version
+```bash
+# Using the automation script
+./sdc-build.sh
+
+# Or manually
+mkdocs build -f mkdocs-en.yml
+```
+
+### Spanish Version (Pending Translation)
+```bash
+# Using the automation script (when available)
+./sdc-build-es.sh
+
+# Or manually (when mkdocs-es.yml is created)
+mkdocs build -f mkdocs-es.yml
+```
+
+The generated files will be placed in the `site/` directory.
+
+ ## Automation Scripts
+
+The project includes automation scripts for building and serving the documentation:
+
+### English Scripts
+- **`sdc-build.sh`** - Builds the English documentation
+- **`sdc-serve.sh`** - Serves the English documentation locally for development
+
+### Spanish Scripts (Pending Translation)
+- **`sdc-build-es.sh`** - Will build the Spanish documentation (to be created)
+- **`sdc-serve-es.sh`** - Will serve the Spanish documentation locally (to be created)
+
+### Multi-Language Build Automation
+
+You can create additional language-specific scripts following this pattern:
+
+```bash
+# For French (example)
+./sdc-build-fr.sh   # Build French docs
+./sdc-serve-fr.sh   # Serve French docs
+
+# For German (example)  
+./sdc-build-de.sh   # Build German docs
+./sdc-serve-de.sh   # Serve German docs
+```
+
+Each language should have:
+1. A `docs-{lang}/` directory with translated content
+2. A `mkdocs-{lang}.yml` configuration file
+3. Build and serve scripts following the naming convention
+4. Theme overrides in `material/overrides-{lang}/` if needed
+
+## Deployment
 
  You can deploy the site using [GitHub Pages](https://docs.github.com/en/pages) or any static hosting provider.
 
- To deploy to GitHub Pages:
+To deploy to GitHub Pages:
 
- ```bash
- mkdocs gh-deploy
- ```
+### English Version
+```bash
+# Deploy English documentation
+mkdocs gh-deploy -f mkdocs-en.yml
+```
 
- ## Visitor Language Redirection (TODO)
+### Spanish Version (Pending Translation)
+```bash
+# Deploy Spanish documentation (when available)
+mkdocs gh-deploy -f mkdocs-es.yml
+```
+
+ ## Multi-Language Support
+
+### Spanish Translation Status
+
+**🚧 Spanish translation is currently pending and will be added in future releases.**
+
+When the Spanish translation is complete, the following will be available:
+- `docs-es/` directory with all Spanish content
+- `mkdocs-es.yml` configuration file
+- `sdc-build-es.sh` and `sdc-serve-es.sh` automation scripts
+- `material/overrides-es/` theme customizations for Spanish
+
+### Visitor Language Redirection (TODO)
 
  This site includes a custom JavaScript snippet (in `material/overrides/main.html`) to detect the visitor’s browser language. If the language code starts with `es`, the visitor is automatically redirected to the Spanish version of the current page (prefixing the path with `/es`). Otherwise, the site loads normally.
 
@@ -100,18 +180,53 @@
 
  ## Project Structure
 
- ```
- .
- ├── docs-en              # English documentation content
- ├── material             # Material theme customizations
- ├── mkdocs.yml           # MkDocs configuration
- ├── requirements.txt     # Python dependencies
- └── .gitignore           # Files and directories to ignore
- ```
+```
+.
+├── docs-en/                           # English documentation content
+│   ├── index.md                      # Main documentation index
+│   ├── manifesto.md                  # Project manifesto
+│   ├── about.md                      # About the project
+│   ├── agents/                       # AI agents documentation
+│   │   ├── index.md                 # Agents overview
+│   │   ├── requirements_analyzer_agent.md
+│   │   ├── architecture_agent.md
+│   │   ├── implementation_agent.md
+│   │   ├── test_agent.md
+│   │   ├── security_agent.md
+│   │   └── ... (16 total agents)
+│   ├── human-governed-ai-development-playbook/
+│   │   ├── index.md                 # Playbook main page
+│   │   ├── accelerate-software-development-ai-human-governance.md
+│   │   ├── boost-productivity-human-governed-ai-development-flows.md
+│   │   ├── enterprise-ready-responsible-ai-governance-compliance-framework.md
+│   │   ├── role-based-ai-development-guides-optimize-human-governance.md
+│   │   ├── scalable-ai-development-strategies-any-team-size.md
+│   │   └── universal-human-governed-ai-development-playbook-configuration-template-quickstart-guide.md
+│   ├── assets/images/               # Documentation images
+│   └── blog/                        # Blog posts
+├── docs-es/                          # Spanish documentation (pending translation)
+├── material/                         # Material theme customizations
+│   └── overrides-en/                # English theme overrides
+│       ├── assets/                  # Custom assets
+│       ├── home.html               # Custom home page
+│       ├── main.html               # Main template
+│       └── hooks/                  # MkDocs hooks
+├── mkdocs-en.yml                    # English MkDocs configuration
+├── mkdocs-es.yml                    # Spanish MkDocs configuration (pending)
+├── requirements.txt                  # Python dependencies
+├── sdc-build.sh                     # Build automation script (English)
+├── sdc-serve.sh                     # Serve automation script (English)
+├── sdc-build-es.sh                  # Build automation script (Spanish, pending)
+├── sdc-serve-es.sh                  # Serve automation script (Spanish, pending)
+├── LICENSE.md                       # Creative Commons Attribution 4.0 License
+├── README.md                        # Main project README
+├── DONT-README.md                   # Development documentation
+└── .gitignore                       # Git ignore patterns
+```
 
  ## Contributing
 
- Contributions, issues, and feature requests are welcome! Please check the [issues page](https://github.com/slackdevs/ai-sdlc/issues) for existing issues or create a new one.
+Contributions, issues, and feature requests are welcome! Please check the [issues page](https://github.com/slackdevs/human-governed-ai-development-playbook/issues) for existing issues or create a new one.
 
  1. Fork the repository.
  2. Create a new branch: `git checkout -b feature/YourFeatureName`
