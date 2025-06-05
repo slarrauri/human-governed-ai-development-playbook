@@ -9,7 +9,7 @@ You adapt to different architectural paradigms based on the project's technology
 
 - **Frontend Architectures**: Component-based, MVC, MVVM, Flux/Redux, Micro-frontends
 - **Backend Architectures**: Layered, Hexagonal, Clean Architecture, Microservices, Serverless
-- **Mobile Architectures**: MVVM, MVP, Clean Architecture, BLoC (Flutter), VIPER (iOS)
+- **Mobile Architectures**: MVVM, MVP, Clean Architecture, State Management Patterns, VIPER (iOS)
 - **Enterprise Patterns**: Domain-Driven Design, CQRS, Event Sourcing, SOA
 
 You propose designs that are maintainable, scalable, and aligned with industry best practices.
@@ -151,11 +151,11 @@ class UserService:
         return user
 ```
 
-### 3. BLoC Architecture (Flutter)
+### 3. State Management Architecture (Mobile)
 
-**Flutter/Dart Structure**:
+**Mobile Application Structure**:
 ```
-lib/
+src/
 ├── domain/              # Business logic layer
 │   ├── entities/        # Core business objects
 │   ├── repositories/    # Repository contracts
@@ -165,9 +165,9 @@ lib/
 │   ├── repositories/    # Repository implementations
 │   └── datasources/     # Local/remote data sources
 ├── presentation/        # UI layer
-│   ├── pages/           # Screen widgets
-│   ├── widgets/         # Reusable widgets
-│   └── bloc/            # BLoC state management
+│   ├── screens/         # Application screens
+│   ├── components/      # Reusable components
+│   └── state/           # State management
 └── core/                # Shared utilities
     ├── error/           # Error handling
     ├── network/         # Network utilities
@@ -295,9 +295,11 @@ export class UserManager {
 // Web: React hook
 export const useUserManager = () => new UserManager(new WebUserRepository());
 
-// Mobile: Flutter service  
+// Mobile: Application service  
 class UserManagerService {
-  final UserManager _userManager = UserManager(MobileUserRepository());
+  constructor() {
+    this.userManager = new UserManager(new MobileUserRepository());
+  }
 }
 
 // Backend: Service class

@@ -21,7 +21,7 @@ Each phase of the Human Governed AI Development Playbook is assigned to a specia
 
 * Requirement Analyzer
 * System Designer
-* Flutter/Dart Coder
+* Universal Implementation Agent
 * Test Generator
 * Documentation Writer
 * Reviewer
@@ -87,7 +87,7 @@ Each agent works on its own phase, updates the task status, and passes it forwar
 * **Git + Branch Modeling** for task tracking and delivery
 * **Weaviate + Sourcegraph** for code understanding
 * **Codex / LLM-based Agents** with role-specific prompts
-* **Dart/Flutter toolchain** (build, test, analyze)
+* **Universal development toolchain** (build, test, analyze)
 * **PR Interface** (e.g., GitHub/GitLab) as human governance checkpoint
 
 ---
@@ -103,7 +103,7 @@ Each agent works on its own phase, updates the task status, and passes it forwar
 
 ## Ideal Use Cases
 
-* Large Flutter/Dart projects with modular architectures
+* Large projects with modular architectures across any technology stack
 * Projects requiring strict quality gates
 * Teams seeking to scale output without scaling developers
 * DevOps/AIOps systems needing code-level automation with traceability
