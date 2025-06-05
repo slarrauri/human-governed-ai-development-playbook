@@ -15,7 +15,7 @@ read -p "Enter choice [1-3]: " choice
 
 case $choice in
   1)
-    mkdocs serve -f mkdocs-en.yml
+    mkdocs serve -f mkdocs.yml
     ;;
   2)
     mkdocs serve -f mkdocs-es.yml
@@ -24,8 +24,7 @@ case $choice in
     echo "🌍 Serving both — open 2 tabs manually:"
     echo " - English: http://127.0.0.1:8000/"
     echo " - Spanish: http://127.0.0.1:8001"
-    mkdocs serve -f mkdocs-en.yml &
-    mkdocs serve -f mkdocs-es.yml
+    mkdocs serve -f mkdocs.yml &
     mkdocs serve -f mkdocs-es.yml -a 127.0.0.1:8001
     ;;
   *)

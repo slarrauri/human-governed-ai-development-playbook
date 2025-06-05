@@ -60,7 +60,7 @@ To serve the documentation locally:
 ./sdc-serve.sh
 
 # Or manually
-mkdocs serve -f mkdocs-en.yml
+mkdocs serve -f mkdocs.yml
 ```
 
 ### Spanish Version (Pending Translation)
@@ -84,7 +84,7 @@ To build the static site:
 ./sdc-build.sh
 
 # Or manually
-mkdocs build -f mkdocs-en.yml
+mkdocs build -f mkdocs.yml
 ```
 
 ### Spanish Version (Pending Translation)
@@ -139,7 +139,7 @@ To deploy to GitHub Pages:
 ### English Version
 ```bash
 # Deploy English documentation
-mkdocs gh-deploy -f mkdocs-en.yml
+mkdocs gh-deploy -f mkdocs.yml
 ```
 
 ### Spanish Version (Pending Translation)
@@ -211,8 +211,8 @@ When the Spanish translation is complete, the following will be available:
 │       ├── home.html               # Custom home page
 │       ├── main.html               # Main template
 │       └── hooks/                  # MkDocs hooks
-├── mkdocs-en.yml                    # English MkDocs configuration
-├── mkdocs-es.yml                    # Spanish MkDocs configuration (pending)
+├── mkdocs.yml                    # English MkDocs configuration
+├── mkdocs-es.yml                    # Spanish MkDocs configuration (Alternative)
 ├── requirements.txt                  # Python dependencies
 ├── sdc-build.sh                     # Build automation script (English)
 ├── sdc-serve.sh                     # Serve automation script (English)
