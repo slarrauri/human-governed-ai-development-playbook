@@ -10,11 +10,11 @@ pip install -r requirements.txt
 echo "🔧 Building SlackDevs documentation..."
 
 # English version (root)
-mkdocs build -f mkdocs-en.yml -d site/en
+mkdocs build -f mkdocs-en.yml -d site
 
 # Spanish version (under /es)
 mkdocs build -f mkdocs-es.yml -d site/es
 
 echo "✅ Build complete:"
-echo " - English → site/en/"
+echo " - English → site/"
 echo " - Spanish → site/es/"

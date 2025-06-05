@@ -22,11 +22,11 @@ case $choice in
     ;;
   3)
     echo "🌍 Serving both — open 2 tabs manually:"
-    echo " - English: http://127.0.0.1:8000/en/"
-    echo " - Spanish: http://127.0.0.1:8000/es/"
+    echo " - English: http://127.0.0.1:8000/"
+    echo " - Spanish: http://127.0.0.1:8001"
     mkdocs serve -f mkdocs-en.yml &
     mkdocs serve -f mkdocs-es.yml
-    # mkdocs serve -f mkdocs-es.yml -a 127.0.0.1:8001
+    mkdocs serve -f mkdocs-es.yml -a 127.0.0.1:8001
     ;;
   *)
     echo "❌ Invalid option"
