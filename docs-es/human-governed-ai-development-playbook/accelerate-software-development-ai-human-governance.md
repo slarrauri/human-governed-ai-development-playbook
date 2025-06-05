@@ -21,7 +21,7 @@ Cada fase del Human Governed AI Development Playbook se asigna a un agente de IA
 
 * Analizador de Requisitos
 * Diseñador de Sistemas
-* Programador Flutter/Dart
+* Programador de cliente frontend o móvil
 * Generador de Pruebas
 * Redactor de Documentación
 * Revisor
@@ -87,7 +87,7 @@ Cada agente trabaja en su propia fase, actualiza el estado de la tarea y la pasa
 * **Git + Modelado de Ramas** para seguimiento y entrega de tareas
 * **Weaviate + Sourcegraph** para comprensión de código
 * **Agentes basados en Codex/LLM** con prompts específicos por rol
-* **Toolchain de Dart/Flutter** (build, test, analyze)
+* **Toolchain de desarrollo frontend** (build, test, analyze)
 * **Interfaz de PR** (por ejemplo, GitHub/GitLab) como punto de gobernanza humana
 
 ---
@@ -103,7 +103,7 @@ Cada agente trabaja en su propia fase, actualiza el estado de la tarea y la pasa
 
 ## Casos de Uso Ideales
 
-* Proyectos grandes de Flutter/Dart con arquitecturas modulares
+* Proyectos grandes de aplicaciones móviles con arquitecturas modulares
 * Proyectos que requieren puertas de calidad estrictas
 * Equipos que buscan escalar la producción sin aumentar desarrolladores
 * Sistemas DevOps/AIOps que necesitan automatización a nivel de código con trazabilidad
