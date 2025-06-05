@@ -37,8 +37,8 @@ This document outlines the known challenges and potential drawbacks of the **Hum
 
 * **Risk**: Agents may use deprecated APIs, outdated packages, or produce logic bugs.
 * **Mitigation**:
-
   * Maintenance Agent runs `pub outdated`, `dart analyze`, and `flutter test`.
+  * Maintenance Agent runs `npm outdated`, `npm run lint`, and `npm test`.
   * Internal Reviewer Agent evaluates style, correctness, and stability.
 
 ---

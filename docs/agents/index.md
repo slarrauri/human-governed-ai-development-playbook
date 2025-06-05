@@ -149,8 +149,8 @@ All agents operate under the **Human Governed AI Development Playbook Governance
 
 ### Frontend Technologies
 - **Web**: React, Vue, Angular, Svelte, vanilla JavaScript/TypeScript
-- **Mobile**: Flutter/Dart, React Native, Swift, Kotlin
-- **Desktop**: Electron, Tauri, Qt, .NET, Flutter Desktop
+- **Mobile**: Flutter/Dart, React Native, Swift, Kotlin, Cross-platform frameworks
+- **Desktop**: Electron, Tauri, Qt, .NET, Flutter Desktop, Cross-platform frameworks
 
 ### Backend Technologies  
 - **Languages**: Node.js, Python, Java, C#, Go, Rust, PHP, Scala
